@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ESTRELLAS CALIFORNIA – Salon de Coiffure</title>
+  <meta name="description" content="Salon de coiffure ESTRELLAS CALIFORNIA – coupes, balayage, coloration, coiffures événementielles. Réservez en ligne ou via WhatsApp.">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --gold:#d6a86a;
+      --cream:#fdf8f2;
+      --dark:#3b2a1d;
+      --muted:#7b7b7b;
+      --radius:14px;
+      --maxw:1200px;
+    }
+    *{box-sizing:border-box}
+    body {
+      margin:0;
+      font-family:"Montserrat",sans-serif;
+      background:#fff;
+      color:var(--dark);
+      line-height:1.6;
+    }
+    .container {max-width:var(--maxw);margin:0 auto;padding:30px;}
+    h1,h2,h3,h4 {font-family:"Playfair Display",serif;margin:0 0 15px;}
+    a {color:inherit;text-decoration:none}
+
+    /* Header */
+    header {display:flex;justify-content:space-between;align-items:center;}
+    .logo {font-size:26px;font-weight:700;color:var(--gold);}
+    nav {display:flex;gap:20px;}
+    nav a {padding:8px 14px;border-radius:8px;transition:background .3s;}
+    nav a:hover {background:var(--cream);}
+    .btn {
+      background:var(--gold);color:#fff;font-weight:600;
+      padding:12px 18px;border:none;border-radius:8px;
+      cursor:pointer;transition:background .3s;
+    }
+    .btn:hover {background:#c7984f;}
+
+    /* Hero */
+    .hero {display:grid;grid-template-columns:1fr 450px;gap:30px;align-items:center;margin:40px 0;}
+    .hero img {width:100%;border-radius:var(--radius);object-fit:cover;min-height:340px;}
+    .hero-text p {color:var(--muted);}
+
+    /* Services */
+    .services {display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:30px;}
+    .service {
+      background:var(--cream);padding:20px;border-radius:var(--radius);
+      text-align:center;box-shadow:0 3px 8px rgba(0,0,0,0.05);
+      transition:transform .3s;
+    }
+    .service:hover {transform:translateY(-4px);}
+
+    /* About / Team */
+    .about {display:grid;grid-template-columns:1fr 300px;gap:30px;margin-top:60px;}
+    .team {background:#fff;border-radius:var(--radius);padding:20px;box-shadow:0 3px 8px rgba(0,0,0,0.05);}
+    .member {display:flex;align-items:center;gap:14px;margin-bottom:14px;}
+    .avatar {width:56px;height:56px;border-radius:50%;background:var(--gold);color:#fff;font-weight:bold;
+      display:flex;align-items:center;justify-content:center;}
+
+    /* Galerie */
+    #galerie {padding:60px 0;background:var(--cream);}
+    .gallery-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;}
+    .gallery-grid img {width:100%;height:220px;object-fit:cover;border-radius:var(--radius);transition:transform .4s;}
+    .gallery-grid img:hover {transform:scale(1.04);}
+
+    /* Tarifs */
+    table {width:100%;border-collapse:collapse;margin-top:20px;}
+    th,td {padding:12px;border-bottom:1px solid #eee;text-align:left;}
+
+    /* Contact */
+    .contact {display:grid;grid-template-columns:1fr 340px;gap:30px;margin-top:60px;}
+    form {background:#fff;padding:20px;border-radius:var(--radius);box-shadow:0 3px 8px rgba(0,0,0,0.05);}
+    label {font-size:14px;color:var(--muted);}
+    input,textarea,select {width:100%;padding:10px;border-radius:8px;border:1px solid #ddd;margin:6px 0 14px;}
+    footer {margin-top:50px;text-align:center;font-size:14px;color:var(--muted);}
+    @media(max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .about{grid-template-columns:1fr}
+      .contact{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <div class="logo">ESTRELLAS CALIFORNIA</div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#tarifs">Tarifs</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="btn" id="whatsappBtn">Réserver</button>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Bienvenue chez <span style="color:var(--gold)">ESTRELLAS CALIFORNIA</span></h1>
+      <p>Salon de coiffure moderne à l’ambiance californienne : coupes, colorations, balayages et coiffures événementielles dans un cadre chaleureux.</p>
+      <button class="btn" onclick="scrollToSection('contact')">Prendre rendez-vous</button>
+    </div>
+    <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=1200&auto=format&fit=crop" alt="Salon">
+  </section>
+
+  <h2 id="services">Nos services</h2>
+  <div class="services">
+    <div class="service"><h3>Coupe Femme</h3><p>À partir de 250 DH</p></div>
+    <div class="service"><h3>Coupe Homme</h3><p>À partir de 120 DH</p></div>
+    <div class="service"><h3>Coloration</h3><p>Personnalisée</p></div>
+    <div class="service"><h3>Balayage</h3><p>Sur devis</p></div>
+  </div>
+
+  <section class="about">
+    <div>
+      <h2>Notre philosophie</h2>
+      <p>Nous allions créativité et expertise pour révéler votre style. Chaque prestation est conçue pour sublimer votre personnalité.</p>
+
+      <h3 id="tarifs">Tarifs</h3>
+      <table>
+        <tr><th>Prestation</th><th>Prix</th></tr>
+        <tr><td>Coupe Femme</td><td>250 DH</td></tr>
+        <tr><td>Coupe Homme</td><td>120 DH</td></tr>
+        <tr><td>Brushing</td><td>90 DH</td></tr>
+      </table>
+    </div>
+
+    <aside class="team">
+      <h3>Notre équipe</h3>
+      <div class="member"><div class="avatar">MA</div><div>Maria Alvarez – Coloriste</div></div>
+      <div class="member"><div class="avatar">JL</div><div>Julien Lopez – Barber</div></div>
+    </aside>
+  </section>
+</div>
+
+<section id="galerie">
+  <div class="container">
+    <h2>Galerie Instagram</h2>
+    <p style="text-align:center;color:var(--muted);">Vos dernières inspirations coiffure.</p>
+    <div class="gallery-grid">
+      <!-- 🔗 Remplace par le widget Instagram ou tes propres images -->
+      <img src="https://images.unsplash.com/photo-1500916434205-9c6a4b1b0f51?q=80&w=800" alt="">
+      <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=800" alt="">
+      <img src="https://images.unsplash.com/photo-1487412912498-0447578fcca8?q=80&w=800" alt="">
+    </div>
+    <div style="text-align:center;margin-top:25px;">
+      <a href="https://www.instagram.com/estrellas_california/" target="_blank" class="btn">Voir sur Instagram</a>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <section id="contact" class="contact">
+    <form onsubmit="return sendToWhatsApp(event)">
+      <h2>Réservation :</h2>
+      <label>Nom</label>
+      <input id="name" required>
+      <label>Téléphone</label>
+      <input id="phone" required placeholder="+212…">
+      <label>Prestation</label>
+      <select id="service">
+        <option>Coupe Femme</option>
+        <option>Coupe Homme</option>
+        <option>Balayage</option>
+        <option>Coloration</option>
+      </select>
+      <label>Message</label>
+      <textarea id="message" rows="3" placeholder="Date/heure souhaitée"></textarea>
+      <button class="btn" type="submit">Envoyer sur WhatsApp</button>
+    </form>
+
+    <div>
+      <h3>Nous contacter</h3>
+      <p>123 Avenue California, Casablanca</p>
+      <p>Tél: +212 6 XX XX XX XX</p>
+      <p>Horaires: Mar–Dim 09h–19h</p>
+    </div>
+  </section>
+
+  <footer>© <span id="year"></span> ESTRELLAS CALIFORNIA – Tous droits réservés</footer>
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const phone = '+212600000000'; // remplace par ton numéro
+  function scrollToSection(id){
+    const el = document.getElementById(id);
+    if(el) el.scrollIntoView({behavior:'smooth'});
+  }
+  function sendToWhatsApp(e){
+    e.preventDefault();
+    const n=document.getElementById('name').value;
+    const p=document.getElementById('phone').value;
+    const s=document.getElementById('service').value;
+    const m=document.getElementById('message').value;
+    const text=encodeURIComponent(`Réservation: ${n} - ${p} - ${s} - ${m}`);
+    window.open('https://wa.me/'+phone.replace(/\\D/g,'')+'?text='+text,'_blank');
+    e.target.reset();
+    return false;
+  }
+  document.getElementById('whatsappBtn')
+    .addEventListener('click',()=>window.open('https://wa.me/'+phone.replace(/\\D/g,'')+'?text='+encodeURIComponent('Bonjour, je souhaite un rendez-vous chez ESTRELLAS CALIFORNIA'),'_blank'));
+</script>
+</body>
+</html>
